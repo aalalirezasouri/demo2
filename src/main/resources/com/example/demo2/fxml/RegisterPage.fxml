@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.view.RegisterPageController"
+            styleClass="@../style.css">
+    <center>
+        <VBox alignment="CENTER" spacing="10.0" maxWidth="500">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+            <Label text = "username"/>
+            <TextField fx:id="username" promptText="Enter your username"/>
+
+            <Label text = "password"/>
+            <TextField fx:id="password" promptText="Enter your password"/>
+
+            <Label fx:id="response" visible="false"/>
+            <Button styleClass="register" text="register" onAction="#register"/>
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <Button text="exit" onMouseClicked="#exit"/>
+    </bottom>
+
+</BorderPane>

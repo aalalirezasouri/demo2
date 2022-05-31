@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="720" prefWidth="1920" styleClass="@../style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.example.demo2.view.ProfilePageController">
+    <center>
+        <VBox alignment="CENTER" maxHeight="700" maxWidth="700" spacing="10.0">
+
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="username" />
+                <Label fx:id="username" text="username" />
+                <TextField fx:id="newUsername" promptText="Enter your new username" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="password" />
+                <Label fx:id="password" text="password" />
+                <TextField fx:id="newPassword" promptText="Enter your new password" />
+            </HBox>
+            <Label fx:id="response" contentDisplay="CENTER" visible="false"/>
+            <Button onMouseClicked="#changeUsernameAndPassword" styleClass="change" text="change information" />
+            <Button onMouseClicked="#logout" styleClass="change" text="logout" />
+            <Button onMouseClicked="#removeAccount" styleClass="change" text="remove account" />
+
+        </VBox>
+    </center>
+    <bottom>
+        <Button onMouseClicked="#exit" text="exit" />
+    </bottom>
+
+</BorderPane>
